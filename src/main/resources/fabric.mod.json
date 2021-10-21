@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "random-loot",
+  "version": "${version}",
+  "accessWidener": "random-loot.accesswidener",
+
+  "name": "Random-Loot",
+  "description": "This mod randomizes all game loot tables deterministically using the world seed.",
+  "authors": [
+    "logwet"
+  ],
+  "contact": {
+    "homepage": "https://github.com/logwet",
+    "sources": "https://github.com/logwet/random-loot"
+  },
+
+  "license": "GPL-3.0",
+  "icon": "assets/random-loot/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "me.logwet.random_loot.RandomLoot"
+    ],
+    "client": [
+      "me.logwet.random_loot.RandomLootClient"
+    ],
+    "server": [
+      "me.logwet.random_loot.RandomLootServer"
+    ]
+  },
+  "mixins": [
+    "random-loot.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "minecraft": "1.16.x"
+  }
+}
