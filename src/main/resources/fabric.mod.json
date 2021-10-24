@@ -23,10 +23,10 @@
       "me.logwet.random_loot.RandomLoot"
     ],
     "client": [
-      "me.logwet.random_loot.RandomLootClient"
+
     ],
     "server": [
-      "me.logwet.random_loot.RandomLootServer"
+
     ]
   },
   "mixins": [

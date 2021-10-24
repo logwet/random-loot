@@ -8,12 +8,10 @@
   ],
   "client": [
     "client.DebugHudMixin",
-    "client.IntegratedServerMixin",
     "client.MinecraftClientMixin"
   ],
   "server": [
-    "server.MainMixin",
-    "server.MinecraftDedicatedServerMixin"
+    "server.MainMixin"
   ],
   "injectors": {
     "defaultRequire": 1
