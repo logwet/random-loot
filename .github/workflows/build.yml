@@ -81,12 +81,6 @@ jobs:
           path: './gradle.properties'
           property: 'base_version'
 
-      - name: Generate changelog
-        id: changelog
-        uses: metcalfc/changelog-generator@v1.0.0
-        with:
-          myToken: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Download artifacts
         uses: actions/download-artifact@v2
         with:
@@ -96,6 +90,17 @@ jobs:
       - name: Delete dev artifacts
         run: |
           find bin/ -name '*-dev.jar' -delete
+
+      - name: Generate changelog
+        id: changelog
+        uses: metcalfc/changelog-generator@v1.0.0
+        with:
+          myToken: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Backup changelog
+        id: changelog
+        if: failure()
+        run: echo "::set-output name=changelog::<CHANGELOG>"
 
       - name: Make and upload release
         uses: softprops/action-gh-release@v1
