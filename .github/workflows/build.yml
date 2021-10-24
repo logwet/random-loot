@@ -94,13 +94,9 @@ jobs:
       - name: Generate changelog
         id: changelog
         uses: metcalfc/changelog-generator@v1.0.0
+        continue-on-error: true
         with:
           myToken: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Backup changelog
-        id: changelog
-        if: failure()
-        run: echo "::set-output name=changelog::<CHANGELOG>"
 
       - name: Make and upload release
         uses: softprops/action-gh-release@v1
