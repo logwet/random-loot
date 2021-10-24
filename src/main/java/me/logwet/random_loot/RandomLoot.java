@@ -22,21 +22,11 @@ public class RandomLoot implements ModInitializer {
 	public static final boolean IS_CLIENT = FabricLoader.getInstance().getEnvironmentType() == EnvType.CLIENT;
 	public static final Logger LOGGER = LogManager.getLogger(MODID);
 
-	private static MinecraftServer MS;
 	private static Long seed;
 	private static Random randomInstance = new Random(0);
 
 	public static void log(Level level, String message) {
 		LOGGER.log(level, "[" + MODID + " v" + VERSION + "] " + message);
-	}
-
-	@NotNull
-	public static MinecraftServer getMS() {
-		return MS;
-	}
-
-	public static void setMS(MinecraftServer ms) {
-		MS = ms;
 	}
 
 	@NotNull
