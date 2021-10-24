@@ -1,17 +1,22 @@
 [
   {
-    "java": 8,
-    "os": "ubuntu-latest",
-    "run": "master"
-  },
-  {
-    "java": 11,
-    "os": "ubuntu-latest",
+    "java": 16,
+    "os": "windows-latest",
     "run": "master"
   },
   {
     "java": 16,
     "os": "ubuntu-latest",
     "run": "always"
+  },
+  {
+    "java": 17,
+    "os": "windows-latest",
+    "run": "master"
+  },
+  {
+    "java": 17,
+    "os": "ubuntu-latest",
+    "run": "master"
   }
 ]
