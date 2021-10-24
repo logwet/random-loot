@@ -1,5 +1,7 @@
 # Random-Loot
 
+[![Build and Release Artifacts](https://github.com/logwet/random-loot/actions/workflows/build.yml/badge.svg)](https://github.com/logwet/random-loot/actions/workflows/build.yml)
+
 This mod randomises all game loot tables deterministically using the world seed!
 It works in singleplayer and in a dedicated server environment eg. for coop.
 Inspired by this [site](https://fasguy.net/minecraft_randomizer/).
